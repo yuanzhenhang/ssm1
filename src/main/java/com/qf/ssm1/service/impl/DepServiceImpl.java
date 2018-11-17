@@ -22,4 +22,10 @@ public class DepServiceImpl implements IDepService {
     public List<Dept> queryAll() {
         return depDao.queryAll();
     }
+
+    @Override
+    public int add(Dept dept) {
+
+        return depDao.add(dept);
+    }
 }

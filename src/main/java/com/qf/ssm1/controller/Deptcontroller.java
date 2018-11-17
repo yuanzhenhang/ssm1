@@ -33,5 +33,12 @@ public class Deptcontroller {
         return "depadd";
     }
 
+    @RequestMapping("add")
+    public String add(Dept dept){
+        depService.add(dept);
+
+        return "redirect:/dep/list";
+    }
+
 
 }

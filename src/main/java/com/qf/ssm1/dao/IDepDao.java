@@ -12,4 +12,6 @@ import java.util.List;
 
 public interface IDepDao {
     List<Dept> queryAll();
+
+    int add(Dept dept);
 }

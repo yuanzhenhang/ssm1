@@ -11,4 +11,7 @@ import java.util.List;
  */
 public interface IDepService {
     List<Dept> queryAll();
+
+    int add(Dept dept);
+
 }
