@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>部门信息</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>编号</td>
+        <td>名称</td>
+        <td>位置</td>
+        <td>操作</td>
+    </tr>
+    <tr th:each="dep:${deps}">
+        <td th:text="${dep.deptno}">编号</td>
+        <td><a th:text="${dep.dname}" href="dep/emplist/${dep.deptno}">名称</a></td>
+        <td th:text="${dep.loc}">位置</td>
+        <td>
+            <a href="dep/toupdate/${dep.deptno}">修改</a><a href="dep/delete/ ${dep.deptno}">删除</a>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4"><a href="dep/toAdd">添加</a></td>
+    </tr>
+</table>
+</body>
+</html>

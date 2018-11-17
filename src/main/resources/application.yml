@@ -1,0 +1,13 @@
+spring:
+  thymeleaf:
+    cache: false
+    mode: HTML5
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/1806_ssh
+    username: root
+    password: 123
+
+mybatis:
+  type-aliases-package: com.qf.ssm1.entity
+  mapper-locations: classpath:com/qf/ssm1/dao/mapper/*.xml
